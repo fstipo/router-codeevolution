@@ -16,3 +16,8 @@ nav a.active {
   border-bottom: 2px dotted white;
   font-weight: bold;
 }
+
+.cont {
+  height: 80px;
+  padding: 5px;
+}
