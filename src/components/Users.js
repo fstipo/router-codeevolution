@@ -4,15 +4,12 @@ import { NavLink } from 'react-router-dom';
 
 const Users = () => {
   const [selectedUserId, setSelectedUserId] = useState('');
-
+  // Problem with rendering page
   const getIDHandler = (e) => {
-    const user = e.target.textContent;
-    const id = user.replace('User', '').trim();
-    console.log(id);
-    setSelectedUserId(() => id);
-    setSelectedUserId((state) => {
+    setSelectedUserId(e.target.id);
+    selectedUserId((state) => {
       console.log(state);
-      return state;
+      return;
     });
   };
 
@@ -23,6 +20,7 @@ const Users = () => {
           <div className="m-2 display-4 mb-3">Users:</div>
           {[...Array(7).keys()].map((index) => (
             <NavLink
+              id={index}
               key={index}
               to={`${selectedUserId}`}
               className="ps-4 d-block btn text-start"
