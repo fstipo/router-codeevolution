@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "/router-codeevolution/static/css/main.a5e1bfbf.css",
-    "main.js": "/router-codeevolution/static/js/main.0e507093.js",
+    "main.js": "/router-codeevolution/static/js/main.be4e198f.js",
+    "static/js/956.249272af.chunk.js": "/router-codeevolution/static/js/956.249272af.chunk.js",
     "static/js/787.628e37a5.chunk.js": "/router-codeevolution/static/js/787.628e37a5.chunk.js",
     "index.html": "/router-codeevolution/index.html",
     "main.a5e1bfbf.css.map": "/router-codeevolution/static/css/main.a5e1bfbf.css.map",
-    "main.0e507093.js.map": "/router-codeevolution/static/js/main.0e507093.js.map",
+    "main.be4e198f.js.map": "/router-codeevolution/static/js/main.be4e198f.js.map",
+    "956.249272af.chunk.js.map": "/router-codeevolution/static/js/956.249272af.chunk.js.map",
     "787.628e37a5.chunk.js.map": "/router-codeevolution/static/js/787.628e37a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5e1bfbf.css",
-    "static/js/main.0e507093.js"
+    "static/js/main.be4e198f.js"
   ]
 }
