@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Outlet } from 'react-router';
 import { NavLink, useSearchParams } from 'react-router-dom';
 
@@ -9,13 +9,24 @@ const Users = () => {
   const showActiveUsers = searchParams.get('filter') === 'active';
 
   // Problem with rendering page
-  const getIDHandler = (e) => {
-    setSelectedUserId(e.target.id);
-    selectedUserId((state) => {
-      console.log(state);
-      return;
-    });
-  };
+  // const getIDHandler = (e) =>
+  //   useCallback(() => {
+  //     setSelectedUserId(() => e.target.id);
+  //   }, [e.target.id, selectedUserId]);
+  // selectedUserId((state) => {
+  //   console.log(state);
+  //   return;
+  // });
+  const getIDHandler = useCallback(
+    (e) => {
+      setSelectedUserId((prev) => e.target.id);
+      selectedUserId((state) => {
+        console.log(state);
+        return state;
+      });
+    },
+    [setSelectedUserId]
+  );
 
   return (
     <>
@@ -66,4 +77,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default React.memo(Users);

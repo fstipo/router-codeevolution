@@ -6,4 +6,4 @@ const NoMatch = () => {
   );
 };
 
-export default NoMatch;
+export default React.memo(NoMatch);

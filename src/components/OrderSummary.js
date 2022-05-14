@@ -14,4 +14,4 @@ const OrderSummary = () => {
   );
 };
 
-export default OrderSummary;
+export default React.memo(OrderSummary);

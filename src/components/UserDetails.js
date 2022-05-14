@@ -7,4 +7,4 @@ const UserDetails = () => {
   return <div className="display-5">Details about user {userID}</div>;
 };
 
-export default UserDetails;
+export default React.memo(UserDetails);

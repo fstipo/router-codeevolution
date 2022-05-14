@@ -45,4 +45,4 @@ function App() {
   );
 }
 
-export default App;
+export default React.memo(App);

@@ -10,4 +10,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default React.memo(Featured);
