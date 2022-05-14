@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useSearchParams } from 'react-router-dom';
 
 const Users = () => {
   const [selectedUserId, setSelectedUserId] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const showActiveUsers = searchParams.get('filter') === 'active';
+
   // Problem with rendering page
   const getIDHandler = (e) => {
     setSelectedUserId(e.target.id);
@@ -37,6 +41,25 @@ const Users = () => {
         </div>
         <div className="col">
           <Outlet />
+          <div className="mt-5">
+            <button
+              className="btn btn-dark me-4"
+              onClick={() => setSearchParams({ filter: 'active' })}
+            >
+              Active users
+            </button>
+            <button
+              className="btn btn-dark"
+              onClick={() => setSearchParams({})}
+            >
+              Reset filter
+            </button>
+            {showActiveUsers ? (
+              <h2 className="mt-5">Show active users</h2>
+            ) : (
+              <h2 className="mt-5">Show all users</h2>
+            )}
+          </div>
         </div>
       </div>
     </>
